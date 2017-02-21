@@ -14,13 +14,60 @@
     <body class="container-fluid">
         <h1>Welcome to Rockin Debates.</h1>
         <h3>The best place to talk about music!</h3>
-      <button id="sign_up" class="button">Sign Up</button>
-      <button id="sign_in" class="button">Sign In</button>
-      <button id="change_password" class="button">Change Password</button>
-      <button id="sign_out" class="button">Sign Out</button>
-      <button id="create_post" class="button">New Post</button>
-      <button id="search" class="button">Search</button>
-
+        <form id="sign-up">
+              <fieldset>
+                <legend>Sign up!</legend>
+                <label>
+                  Email
+                  <input type="text" name="credentials[email]">
+                </label>
+                <label>
+                  Password
+                  <input type="password" name="credentials[password]">
+                </label>
+                <label>
+                  Password Confirmation
+                  <input type="password" name="credentials[password_confirmation]">
+                </label>
+                <input type="submit" name="submit" value="Sign up!">
+              </fieldset>
+            </form>
+            <form id="sign-in">
+              <fieldset>
+                <legend>Sign in!</legend>
+                <label>
+                  Email
+                  <input type="text" name="credentials[email]">
+                </label>
+                <label>
+                  Password
+                  <input type="password" name="credentials[password]">
+                </label>
+                <input type="submit" name="submit" value="Sign in!">
+              </fieldset>
+            </form>
+            <form id="change-password" class="hidden">
+              <fieldset>
+                <legend>Change Password</legend>
+                <label>
+                Old password
+                <input type="password" name="passwords[old]">
+                New password
+                <input type="password" name="passwords[new]">
+              </label>
+              <input type="submit" name="submit" value="Change Password">
+              </fieldset>
+            </form>
+            <form id="sign-out" class="hidden">
+              <fieldset>
+                <legend>Sign out!</legend>
+                <input id="signOut" type="submit" name="submit" value="Sign Out!">
+              </fieldset>
+            </form>
+            <button id="new-blog" class="hidden">Create Blog</button>
+            <button id="search-blogs" class="hidden">Search</button>
+            <div class="message" id="winMessage"></div>
+            <div class="message" id="Signup-message">Please sign in to start checking everything out.</div>
       <p> </p>
     </body>
 </html>
