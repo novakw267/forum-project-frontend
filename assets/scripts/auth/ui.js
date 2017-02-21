@@ -12,7 +12,7 @@ const signInSuccess = (data) => {
   $('#change-password').removeClass('hidden');
   $('#sign-out').removeClass('hidden');
   $('#new-blog').removeClass('hidden');
-  $('#winMessage').text(data.email + ' has signed in, hit New Game to start playing!');
+  $('#winMessage').text(data.email + ' has signed in!');
 
 
   // hide forms we want
@@ -33,9 +33,8 @@ const changePwSuccess = () => {
 const signOutSuccess = () => {
   $('#change-password').addClass('hidden');
   $('#sign-out').addClass('hidden');
-  $('#game-board').addClass('hidden');
-  $('#play-again').addClass('hidden');
-  $('#games-played').addClass('hidden');
+  $('#new-blog').addClass('hidden');
+  $('#search-blogs').addClass('hidden');
   $('#sign-up').removeClass('hidden');
   $('#sign-in').removeClass('hidden');
 };

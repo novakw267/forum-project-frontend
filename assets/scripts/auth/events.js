@@ -7,8 +7,6 @@ const ui = require('./ui');
 
 const store = require('../store');
 
-const game = require('../game.js');
-
 const onSignUp = function(event) {
   event.preventDefault();
 
@@ -53,6 +51,13 @@ const onSignOut = function(event) {
   api.signOut()
     .then(() => {
       delete store.user.id;
+      $('#winMessage').text('So long, come back again. =)');
+      $('#change-password').addClass('hidden');
+      $('#sign-out').addClass('hidden');
+      $('#new-blog').addClass('hidden');
+      $('#search-blogs').addClass('hidden');
+      $('#sign-up').removeClass('hidden');
+      $('#sign-in').removeClass('hidden');
       return store;
     });
 };
