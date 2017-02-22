@@ -51,7 +51,6 @@ const signOut = function() {
 
 module.exports = {
   signUp,
-  profile,
   signIn,
   changePassword,
   signOut,
