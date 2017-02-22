@@ -12,6 +12,14 @@ const signUp = function(data) {
   });
 };
 
+const profile = function(data) {
+  return $.ajax({
+    url: config.apiOrigin + '/profiles/create',
+    method: 'POST',
+    data,
+  });
+};
+
 const signIn = function(data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
@@ -43,6 +51,7 @@ const signOut = function() {
 
 module.exports = {
   signUp,
+  profile,
   signIn,
   changePassword,
   signOut,

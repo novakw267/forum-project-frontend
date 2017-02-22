@@ -1,9 +1,25 @@
 'use strict';
 
-const success = (data) => {
+const signUpSuccess = (data) => {
   if (data) {
-    $('#winMessage').text('Congradulations on signing up!');
+    // // $('#winMessage').text('Congradulations on signing up!');
+    $('#change-password').removeClass('hidden');
+    $('#sign-out').removeClass('hidden');
+    $('#new-blog').removeClass('hidden');
+    // // $('#winMessage').text(data.email + ' has signed in!');
+    $('#title').removeClass('hidden');
+    $('#subject').removeClass('hidden');
+    $('#body').removeClass('hidden');
+    $('#title_label').removeClass('hidden');
+    $('#subject_label').removeClass('hidden');
+    $('#body_label').removeClass('hidden');
+    // // hide forms we want
+    $('#Signup-message').addClass('hidden');
+    $('#sign-up').addClass('hidden');
+    $('#sign-in').addClass('hidden');
+    $('#sign-in')[0].reset();
     $('#sign-up')[0].reset();
+    console.log(data);
   }
 };
 
@@ -12,14 +28,12 @@ const signInSuccess = (data) => {
   $('#change-password').removeClass('hidden');
   $('#sign-out').removeClass('hidden');
   $('#new-blog').removeClass('hidden');
-  $('#winMessage').text(data.email + ' has signed in!');
+  // $('#winMessage').text(data.email + ' has signed in!');
   $('#title').removeClass('hidden');
   $('#subject').removeClass('hidden');
   $('#body').removeClass('hidden');
   $('#title_label').removeClass('hidden');
   $('#subject_label').removeClass('hidden');
-
-
   // hide forms we want
   $('#Signup-message').addClass('hidden');
   $('#sign-up').addClass('hidden');
@@ -51,7 +65,7 @@ const failure = () => {
 
 module.exports = {
   failure,
-  success,
+  signUpSuccess,
   signInSuccess,
   signOutSuccess,
   changePwSuccess

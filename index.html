@@ -31,7 +31,21 @@
                   Password Confirmation
                   <input type="password" name="credentials[password_confirmation]">
                 </label>
+                <div>
+      <label>
+                  Profile Name
+                  <input type="text" name="profiles[USERNAME]" id="username" class="hidden">
+                </label>
+      <label>
+                  Favorite Genre
+                  <input type="text" name="profiles[FAVORITE_GENRE]" id="favorite_genre" class="hidden">
+                </label>
+      <label>
+                  Favorite Band
+                  <input type="text" name="profiles[FAVORITE_BAND]" id="favorite_band" class="hidden">
+                </label>
       <input type="submit" name="submit" value="Sign up!">
+    </div>
     </fieldset>
   </form>
   <form id="sign-in">
@@ -74,18 +88,18 @@
   <div class="message" id="Signup-message">Please sign in to start checking everything out.</div>
   <!-- Blog Post Input -->
   <div>
-    <label for="title" class="hidden" id "title_label">Title</label>
-    <textarea rows="1" cols="20" name="blog_template[title]" class="hidden" id="title">
+    <label for="title" class="hidden" id="title_label">Title</label>
+    <textarea rows="1" cols="20" name="blog_template[BLOG_TITLE]" class="hidden" id="title">
             </textarea>
   </div>
   <div>
-    <label for="subject" class="hidden" id "subject_label">Subject</label>
-    <textarea rows="1" cols="30" name="blog_template[subject]" class="hidden" id="subject">
+    <label for="subject" class="hidden" id="subject_label">Subject</label>
+    <textarea rows="1" cols="30" name="blog_template[SUBJECT]" class="hidden" id="subject">
             </textarea>
   </div>
   <div>
-    <label for="body" class="hidden" id "body_label">Body</label>
-    <textarea rows="5" cols="65" name "blog_template[body]" class="hidden" id="body">
+    <label for="body" class="hidden" id="body_label">Body</label>
+    <textarea rows="5" cols="65" name "blog_template[BODY]" class="hidden" id="body">
             </textarea>
   </div>
   <p> </p>

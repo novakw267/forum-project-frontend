@@ -13,9 +13,24 @@ const onSignUp = function(event) {
   let data = getFormFields(event.target);
 
   api.signUp(data)
+  .then(() => {
+    api.signIn(data)
+    .then(ui.signUpSuccess);
+  })
     .then(ui.success)
     .catch(ui.failure);
 };
+
+const onProfile = function(event) {
+  event.preventDefault();
+
+  let data = getFormFields(event.target);
+
+  api.profile(data)
+    .then(ui.success)
+    .catch(ui.failure);
+};
+
 
 const onSignIn = function(event) {
   event.preventDefault();
@@ -27,7 +42,7 @@ const onSignIn = function(event) {
     // can only have 1 .then
 
     .then((response) => {
-      store.user = response.user;
+      store.user = response.user.profile;
       return store.user;
     })
     .then(ui.signInSuccess)
