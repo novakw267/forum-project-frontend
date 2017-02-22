@@ -1,76 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Rockin Debates</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Rockin Debates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-        <h1>Welcome to Rockin Debates.</h1>
-        <h3>The best place to talk about music!</h3>
-        <form id="sign-up">
-              <fieldset>
-                <legend>Sign up!</legend>
-                <label>
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+  <h1>Welcome to Rockin Debates.</h1>
+  <h3>The best place to talk about music!</h3>
+  <form id="sign-up">
+    <fieldset>
+      <legend>Sign up!</legend>
+      <label>
                   Email
                   <input type="text" name="credentials[email]">
                 </label>
-                <label>
+      <label>
                   Password
                   <input type="password" name="credentials[password]">
                 </label>
-                <label>
+      <label>
                   Password Confirmation
                   <input type="password" name="credentials[password_confirmation]">
                 </label>
-                <input type="submit" name="submit" value="Sign up!">
-              </fieldset>
-            </form>
-            <form id="sign-in">
-              <fieldset>
-                <legend>Sign in!</legend>
-                <label>
+      <input type="submit" name="submit" value="Sign up!">
+    </fieldset>
+  </form>
+  <form id="sign-in">
+    <fieldset>
+      <legend>Sign in!</legend>
+      <label>
                   Email
                   <input type="text" name="credentials[email]">
                 </label>
-                <label>
+      <label>
                   Password
                   <input type="password" name="credentials[password]">
                 </label>
-                <input type="submit" name="submit" value="Sign in!">
-              </fieldset>
-            </form>
-            <form id="change-password" class="hidden">
-              <fieldset>
-                <legend>Change Password</legend>
-                <label>
+      <input type="submit" name="submit" value="Sign in!">
+    </fieldset>
+  </form>
+  <form id="change-password" class="hidden">
+    <fieldset>
+      <legend>Change Password</legend>
+      <label>
                 Old password
                 <input type="password" name="passwords[old]">
                 New password
                 <input type="password" name="passwords[new]">
               </label>
-              <input type="submit" name="submit" value="Change Password">
-              </fieldset>
-            </form>
-            <form id="sign-out" class="hidden">
-              <fieldset>
-                <legend>Sign out!</legend>
-                <input id="signOut" type="submit" name="submit" value="Sign Out!">
-              </fieldset>
-            </form>
-            <!-- play again -->
-            <button id="new-blog" class="hidden">Create Blog</button>
-            <!-- games played -->
-            <button id="search-blogs" class="hidden">Search</button>
-            <div class="message" id="winMessage"></div>
-            <div class="message" id="Signup-message">Please sign in to start checking everything out.</div>
+      <input type="submit" name="submit" value="Change Password">
+    </fieldset>
+  </form>
+  <form id="sign-out" class="hidden">
+    <fieldset>
+      <legend>Sign out!</legend>
+      <input id="signOut" type="submit" name="submit" value="Sign Out!">
+    </fieldset>
+  </form>
+  <!-- play again -->
+  <button id="new-blog" class="hidden">Create Blog</button>
+  <!-- games played -->
+  <button id="search-blogs" class="hidden">Search</button>
+  <div class="message" id="winMessage"></div>
+  <div class="message" id="Signup-message">Please sign in to start checking everything out.</div>
+  <!-- Blog Post Input -->
+  <div>
+    <label for="title" class="hidden" id "title_label">Title</label>
+    <textarea rows="1" cols="20" name="blog_template[title]" class="hidden" id="title">
+            </textarea>
+  </div>
+  <div>
+    <label for="subject" class="hidden" id "subject_label">Subject</label>
+    <textarea rows="1" cols="30" name="blog_template[subject]" class="hidden" id="subject">
+            </textarea>
+  </div>
+  <div>
+    <label for="body" class="hidden" id "body_label">Body</label>
+    <textarea rows="5" cols="65" name "blog_template[body]" class="hidden" id="body">
+            </textarea>
+  </div>
+  <p> </p>
+</body>
 
-      <p> </p>
-    </body>
 </html>

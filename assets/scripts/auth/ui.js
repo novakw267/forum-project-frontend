@@ -13,6 +13,11 @@ const signInSuccess = (data) => {
   $('#sign-out').removeClass('hidden');
   $('#new-blog').removeClass('hidden');
   $('#winMessage').text(data.email + ' has signed in!');
+  $('#title').removeClass('hidden');
+  $('#subject').removeClass('hidden');
+  $('#body').removeClass('hidden');
+  $('#title_label').removeClass('hidden');
+  $('#subject_label').removeClass('hidden');
 
 
   // hide forms we want
