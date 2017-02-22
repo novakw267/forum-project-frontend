@@ -2,39 +2,44 @@
 
 const signUpSuccess = (data) => {
   if (data) {
-    // // $('#winMessage').text('Congradulations on signing up!');
-    $('#change-password').removeClass('hidden');
-    $('#sign-out').removeClass('hidden');
-    $('#new-blog').removeClass('hidden');
-    // // $('#winMessage').text(data.email + ' has signed in!');
-    $('#title').removeClass('hidden');
-    $('#subject').removeClass('hidden');
-    $('#body').removeClass('hidden');
-    $('#title_label').removeClass('hidden');
-    $('#subject_label').removeClass('hidden');
-    $('#body_label').removeClass('hidden');
-    // // hide forms we want
+    $('#create_profile').removeClass('hidden');
     $('#Signup-message').addClass('hidden');
+    $('#username').removeClass('hidden');
+    $('#favorite_band').removeClass('hidden');
+    $('#favorite_genre').removeClass('hidden');
+    // $('#title').removeClass('hidden');
+    // $('#subject').removeClass('hidden');
+    // $('#body').removeClass('hidden');
+    // $('#title_label').removeClass('hidden');
+    // $('#subject_label').removeClass('hidden');
+    $('#create').removeClass('hidden');
+    // $('#new-blog').removeClass('hidden');
+    // $('#body_label').removeClass('hidden');
     $('#sign-up').addClass('hidden');
     $('#sign-in').addClass('hidden');
     $('#sign-in')[0].reset();
     $('#sign-up')[0].reset();
-    console.log(data);
   }
 };
 
 const signInSuccess = (data) => {
-  // unhide forms we want
+  // // $('#winMessage').text('Congradulations on signing up!');
+  $('#username').removeClass('hidden');
+  $('#favorite_band').removeClass('hidden');
+  $('#favorite_genre').removeClass('hidden');
   $('#change-password').removeClass('hidden');
   $('#sign-out').removeClass('hidden');
   $('#new-blog').removeClass('hidden');
-  // $('#winMessage').text(data.email + ' has signed in!');
+  $('#create_profile').removeClass('hidden');
+  $('#update').removeClass('hidden');
+  // // $('#winMessage').text(data.email + ' has signed in!');
   $('#title').removeClass('hidden');
   $('#subject').removeClass('hidden');
   $('#body').removeClass('hidden');
   $('#title_label').removeClass('hidden');
   $('#subject_label').removeClass('hidden');
-  // hide forms we want
+  $('#body_label').removeClass('hidden');
+  // // hide forms we want
   $('#Signup-message').addClass('hidden');
   $('#sign-up').addClass('hidden');
   $('#sign-in').addClass('hidden');

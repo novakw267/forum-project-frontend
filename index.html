@@ -31,22 +31,27 @@
                   Password Confirmation
                   <input type="password" name="credentials[password_confirmation]">
                 </label>
-                <div>
-      <label>
-                  Profile Name
-                  <input type="text" name="profiles[USERNAME]" id="username" class="hidden">
-                </label>
-      <label>
-                  Favorite Genre
-                  <input type="text" name="profiles[FAVORITE_GENRE]" id="favorite_genre" class="hidden">
-                </label>
-      <label>
-                  Favorite Band
-                  <input type="text" name="profiles[FAVORITE_BAND]" id="favorite_band" class="hidden">
-                </label>
       <input type="submit" name="submit" value="Sign up!">
-    </div>
     </fieldset>
+  </form>
+  <form id="create_profile" class="hidden">
+    <fieldset>
+      <legend>Create Profile!</legend>
+    <label>
+                Profile Name
+                <input type="text" name="profiles[USERNAME]" id="username" class="hidden">
+              </label>
+    <label>
+                Favorite Genre
+                <input type="text" name="profiles[FAVORITE_GENRE]" id="favorite_genre" class="hidden">
+              </label>
+    <label>
+                Favorite Band
+                <input type="text" name="profiles[FAVORITE_BAND]" id="favorite_band" class="hidden">
+              </label>
+    <input type="submit" name="submit" value="Create Profile" id="create" class="hidden">
+    <input type="submit" name="submit" value="Update Profile" id="update" class="hidden">
+  </fieldset>
   </form>
   <form id="sign-in">
     <fieldset>
@@ -77,11 +82,8 @@
   <form id="sign-out" class="hidden">
     <fieldset>
       <legend>Sign out!</legend>
-      <input id="signOut" type="submit" name="submit" value="Sign Out!">
     </fieldset>
   </form>
-  <!-- play again -->
-  <button id="new-blog" class="hidden">Create Blog</button>
   <!-- games played -->
   <button id="search-blogs" class="hidden">Search</button>
   <div class="message" id="winMessage"></div>
@@ -93,7 +95,7 @@
             </textarea>
   </div>
   <div>
-    <label for="subject" class="hidden" id="subject_label">Subject</label>
+    <label for="subject" class="hidden" id="subject_label">Topic</label>
     <textarea rows="1" cols="30" name="blog_template[SUBJECT]" class="hidden" id="subject">
             </textarea>
   </div>
@@ -101,6 +103,13 @@
     <label for="body" class="hidden" id="body_label">Body</label>
     <textarea rows="5" cols="65" name "blog_template[BODY]" class="hidden" id="body">
             </textarea>
+  </div>
+  <div>
+    <!-- play again -->
+    <button id="new-blog" class="hidden">Create Blog</button>
+  </div>
+  <div>
+        <input id="signOut" type="submit" name="submit" value="Sign Out!">
   </div>
   <p> </p>
 </body>
