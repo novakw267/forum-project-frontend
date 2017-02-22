@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    // production: 'https://rocky-meadow-90201.herokuapp.com/',
+    production: 'https://rocky-meadow-90201.herokuapp.com/',
     development: 'http://localhost:4741/'
   },
 };

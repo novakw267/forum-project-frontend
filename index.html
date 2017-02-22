@@ -50,7 +50,7 @@
                 <input type="text" name="profiles[FAVORITE_BAND]" id="favorite_band" class="hidden">
               </label>
     <input type="submit" name="submit" value="Create Profile" id="create" class="hidden">
-    <input type="submit" name="submit" value="Update Profile" id="update" class="hidden">
+    <!-- <input type="submit" name="submit" value="Update Profile" id="update" class="hidden"> -->
   </fieldset>
   </form>
   <form id="sign-in">
@@ -82,6 +82,7 @@
   <form id="sign-out" class="hidden">
     <fieldset>
       <legend>Sign out!</legend>
+      <input id="signOut" type="submit" name="submit" value="Sign Out!">
     </fieldset>
   </form>
   <!-- games played -->
@@ -101,15 +102,12 @@
   </div>
   <div>
     <label for="body" class="hidden" id="body_label">Body</label>
-    <textarea rows="5" cols="65" name "blog_template[BODY]" class="hidden" id="body">
+    <textarea rows="5" cols="65" name="blog_template[BODY]" class="hidden" id="body">
             </textarea>
   </div>
   <div>
     <!-- play again -->
     <button id="new-blog" class="hidden">Create Blog</button>
-  </div>
-  <div>
-        <input id="signOut" type="submit" name="submit" value="Sign Out!">
   </div>
   <p> </p>
 </body>

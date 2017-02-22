@@ -31,7 +31,7 @@ const signInSuccess = (data) => {
   $('#sign-out').removeClass('hidden');
   $('#new-blog').removeClass('hidden');
   $('#create_profile').removeClass('hidden');
-  $('#update').removeClass('hidden');
+  $('#create').removeClass('hidden');
   // // $('#winMessage').text(data.email + ' has signed in!');
   $('#title').removeClass('hidden');
   $('#subject').removeClass('hidden');

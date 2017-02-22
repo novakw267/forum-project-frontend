@@ -12,14 +12,6 @@ const signUp = function(data) {
   });
 };
 
-const profile = function(data) {
-  return $.ajax({
-    url: config.apiOrigin + '/profiles/create',
-    method: 'POST',
-    data,
-  });
-};
-
 const signIn = function(data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
@@ -28,7 +20,7 @@ const signIn = function(data) {
   });
 };
 
-const changePassword = function(data) {
+const changePassword = function (data) {
   return $.ajax({
     url: `${config.apiOrigin}/change-password/${store.user.id}`,
     method: 'PATCH',
