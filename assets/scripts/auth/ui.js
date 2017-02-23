@@ -55,10 +55,21 @@ const changePwSuccess = () => {
 
 //change back to how it looked before you signed in.
 const signOutSuccess = () => {
+  $('#create_profile').addClass('hidden');
+  $('#Signup-message').addClass('hidden');
+  $('#username').addClass('hidden');
+  $('#favorite_band').addClass('hidden');
+  $('#favorite_genre').addClass('hidden');
+  $('#title').addClass('hidden');
+  $('#subject').addClass('hidden');
+  $('#body').addClass('hidden');
+  $('#title_label').addClass('hidden');
+  $('#subject_label').addClass('hidden');
+  $('#create').addClass('hidden');
+  $('#new-blog').addClass('hidden');
+  $('#body_label').addClass('hidden');
   $('#change-password').addClass('hidden');
   $('#sign-out').addClass('hidden');
-  $('#new-blog').addClass('hidden');
-  $('#search-blogs').addClass('hidden');
   $('#sign-up').removeClass('hidden');
   $('#sign-in').removeClass('hidden');
 };

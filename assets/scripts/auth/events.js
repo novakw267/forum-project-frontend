@@ -27,11 +27,9 @@ const onSignIn = function(event) {
   let data = getFormFields(event.target);
 
   api.signIn(data)
-
     // can only have 1 .then
-
     .then((response) => {
-      store.user = response.user.profile;
+      store.user = response.user;
       return store.user;
     })
     .then(ui.signInSuccess)
@@ -55,6 +53,7 @@ const onSignOut = function(event) {
   api.signOut()
     .then(() => {
       delete store.user.id;
+      ui.signOutSuccess();
       return store;
     });
 };
