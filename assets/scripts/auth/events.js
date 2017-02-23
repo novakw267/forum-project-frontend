@@ -12,10 +12,22 @@ const onSignUp = function(event) {
 
   let data = getFormFields(event.target);
 
+  console.log(data);
+  let signInData = {
+    credentials: {
+      email: data.credentials.email,
+      password: data.credentials.password,
+    }
+  };
   api.signUp(data)
   .then(() => {
-    api.signIn(data)
-    .then(ui.signUpSuccess);
+    api.signIn(signInData)
+      .then((response) => {
+        store.user = response.user;
+        return store.user;
+      })
+      .then(ui.signUpSuccess)
+      .catch(ui.failure);
   })
     .then(ui.success)
     .catch(ui.failure);

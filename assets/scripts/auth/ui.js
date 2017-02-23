@@ -1,7 +1,7 @@
 'use strict';
 
-const signUpSuccess = (data) => {
-  if (data) {
+const signUpSuccess = () => {
+  // if (data) {
     $('#create_profile').removeClass('hidden');
     $('#Signup-message').addClass('hidden');
     $('#username').removeClass('hidden');
@@ -19,19 +19,19 @@ const signUpSuccess = (data) => {
     $('#sign-in').addClass('hidden');
     $('#sign-in')[0].reset();
     $('#sign-up')[0].reset();
-  }
+  // }
 };
 
 const signInSuccess = (data) => {
   // // $('#winMessage').text('Congradulations on signing up!');
-  $('#username').removeClass('hidden');
-  $('#favorite_band').removeClass('hidden');
-  $('#favorite_genre').removeClass('hidden');
+  $('#user-name').removeClass('hidden');
+  $('#favorite-band').removeClass('hidden');
+  $('#favorite-genre').removeClass('hidden');
   $('#change-password').removeClass('hidden');
   $('#sign-out').removeClass('hidden');
   $('#new-blog').removeClass('hidden');
-  $('#create_profile').removeClass('hidden');
-  $('#create').removeClass('hidden');
+  $('#update_profile').removeClass('hidden');
+  $('#update').removeClass('hidden');
   // // $('#winMessage').text(data.email + ' has signed in!');
   $('#title').removeClass('hidden');
   $('#subject').removeClass('hidden');

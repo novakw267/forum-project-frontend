@@ -21,7 +21,7 @@ const onUpdateProfile = function(event) {
 
   let data = getFormFields(event.target);
 
-  api.updateProfile(data)
+  api.updateProfile(store.user.id, data)
     .then(ui.changePwSuccess)
     .catch(ui.failure);
 };

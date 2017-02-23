@@ -15,9 +15,9 @@ const profile = function(data) {
   });
 };
 
-const updateProfile = function (data) {
+const updateProfile = function (id, data) {
   return $.ajax({
-    url: config.apiOrigin + '/profiles',
+    url: config.apiOrigin + "/profiles/" + id,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,
@@ -25,6 +25,7 @@ const updateProfile = function (data) {
     data,
   });
 };
+
 module.exports = {
   profile,
   updateProfile,
