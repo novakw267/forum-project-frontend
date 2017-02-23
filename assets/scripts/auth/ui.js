@@ -56,6 +56,7 @@ const changePwSuccess = () => {
 //change back to how it looked before you signed in.
 const signOutSuccess = () => {
   $('#create_profile').addClass('hidden');
+  $('#update_profile').addClass('hidden');
   $('#Signup-message').addClass('hidden');
   $('#username').addClass('hidden');
   $('#favorite_band').addClass('hidden');

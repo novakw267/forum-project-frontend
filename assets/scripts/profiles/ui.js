@@ -24,6 +24,10 @@ const createProfileSuccess = () => {
     $('#sign-up')[0].reset();
 };
 
+const onUpdateProfile = () => {
+
+};
+
 module.exports = {
   createProfileSuccess,
 };
