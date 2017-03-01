@@ -24,10 +24,12 @@ const createProfileSuccess = () => {
     $('#sign-up')[0].reset();
 };
 
-const onUpdateProfile = () => {
+const updateProfileSuccess = (response) => {
+  console.error(response);
 
 };
 
 module.exports = {
   createProfileSuccess,
+  updateProfileSuccess
 };

@@ -22,7 +22,7 @@ const onUpdateProfile = function(event) {
   let data = getFormFields(event.target);
 
   api.updateProfile(store.user.id, data)
-    .then(ui.onUpdateProfile)
+    .then(ui.updateProfileSuccess)
     .catch(ui.failure);
 };
 
