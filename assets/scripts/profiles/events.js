@@ -20,8 +20,8 @@ const onUpdateProfile = function(event) {
   event.preventDefault();
 
   let data = getFormFields(event.target);
-
-  api.updateProfile(store.user.id, data)
+  let id = store.user.id;
+  api.updateProfile(id, data)
     .then(ui.updateProfileSuccess)
     .catch(ui.failure);
 };

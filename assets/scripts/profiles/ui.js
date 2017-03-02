@@ -25,7 +25,7 @@ const createProfileSuccess = () => {
 };
 
 const updateProfileSuccess = (response) => {
-  console.error(response);
+    console.log(response);
 
 };
 
