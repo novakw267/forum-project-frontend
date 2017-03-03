@@ -16,12 +16,24 @@ const onCreateProfile = function(event) {
     .catch(ui.failure);
 };
 
+const onGetProfileID = function() {
+  // event.preventDefault();
+  api.getProfile()
+    // debugger;
+    .then((response) => {
+      console.log(response)
+      store.profileID = response.profile.id;
+    })
+    .done(ui.getProfileSuccess)
+    .fail(ui.getProfileFailure);
+};
+// store.profileID
+
 const onUpdateProfile = function(event) {
   event.preventDefault();
 
   let data = getFormFields(event.target);
-  let id = store.user.id;
-  api.updateProfile(id, data)
+   api.updateProfile(data)
     .then(ui.updateProfileSuccess)
     .catch(ui.failure);
 };
@@ -45,5 +57,6 @@ const profHandlers = () => {
 
 module.exports = {
  profHandlers,
+ onGetProfileID,
  onUpdateProfile,
 };

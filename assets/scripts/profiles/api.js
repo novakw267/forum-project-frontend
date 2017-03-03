@@ -15,9 +15,19 @@ const profile = function(data) {
   });
 };
 
-const updateProfile = function (id, data) {
+const getProfile = function() {
   return $.ajax({
-    url: config.apiOrigin + "/profiles/" + id,
+    url: config.apiOrigin + '/profiles/' + store.userId,
+    method: 'GET',
+    headers: {
+      Authorization: `Token token=${store.user.token}`,
+    },
+  });
+};
+
+const updateProfile = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + "/profiles/" + store.profileID,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,
@@ -28,5 +38,6 @@ const updateProfile = function (id, data) {
 
 module.exports = {
   profile,
+  getProfile,
   updateProfile,
 };

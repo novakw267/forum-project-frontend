@@ -1,5 +1,7 @@
 'use strict';
 
+const profile = require('../profiles/events');
+
 const signUpSuccess = () => {
   // if (data) {
     $('#create_profile').removeClass('hidden');
@@ -45,6 +47,7 @@ const signInSuccess = (data) => {
   $('#sign-in').addClass('hidden');
   $('#sign-in')[0].reset();
   $('#sign-up')[0].reset();
+  profile.onGetProfileID();
 };
 
 //displays a message and clears on a successful change password

@@ -42,6 +42,7 @@ const onSignIn = function(event) {
     // can only have 1 .then
     .then((response) => {
       store.user = response.user;
+      store.userId = response.user.id;
       return store.user;
     })
     .then(ui.signInSuccess)

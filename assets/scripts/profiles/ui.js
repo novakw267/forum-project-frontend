@@ -29,7 +29,18 @@ const updateProfileSuccess = (response) => {
 
 };
 
+
+const getProfileSuccess = function() {
+  console.log('success');
+};
+
+const getProfileFailure = function() {
+  console.log('yoou fucked up');
+};
+
 module.exports = {
   createProfileSuccess,
-  updateProfileSuccess
+  updateProfileSuccess,
+  getProfileSuccess,
+  getProfileFailure,
 };
